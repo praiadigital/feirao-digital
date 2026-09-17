@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feirão Digital — Ofertas Imobiliárias do Litoral</title>
+<meta name="description" content="Vitrine semanal de ofertas imobiliárias do litoral paulista com descontos reais e filtros inteligentes.">
+<style>body{font-family:system-ui;margin:0;background:#fff7ed;color:#7c2d12}header{background:linear-gradient(135deg,#c2410c,#f97316);color:#fff;padding:2rem 1rem;text-align:center}header a{color:#ffedd5}main{max-width:860px;margin:1.5rem auto;padding:0 1rem}.card{background:#fff;border-radius:12px;padding:1.2rem;margin:1rem 0;box-shadow:0 2px 8px rgba(249,115,22,.18)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}.deal{border:2px solid #ffedd5;border-radius:14px;padding:1rem;position:relative}.deal:hover{border-color:#f97316}.off{position:absolute;top:-10px;right:12px;background:#dc2626;color:#fff;border-radius:999px;padding:.15rem .7rem;font-weight:800;font-size:.85rem}.old{text-decoration:line-through;color:#94a3b8;font-size:.85rem}.price{font-size:1.3rem;font-weight:800;color:#c2410c}.tag{background:#ffedd5;border-radius:999px;padding:.12rem .55rem;font-size:.72rem}footer{text-align:center;font-size:.85rem;padding:2rem 1rem;color:#c2410c}.net{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-top:.8rem}.net a{background:#ffedd5;color:#9a3412;padding:.3rem .6rem;border-radius:999px;text-decoration:none;font-size:.8rem}</style>
+</head>
+<body>
+<header><h1>🛍️ Feirão Digital</h1><p>As melhores ofertas de imóveis do litoral, toda semana.</p><a href="https://praia.digital">← praia.digital</a> · <a href="https://praia.digital/apps">Hub de apps</a></header>
+<main>
+<div class="card"><h3>🔥 Ofertas da semana (set/2026)</h3><div class="grid" id="deals"></div></div>
+<div class="card"><h3>Valide antes de fechar</h3><p>🔍 <a href="https://praia.digital/vistoria-app">Vistoria App</a> · 📄 <a href="https://praia.digital/documento-check">Documento Check</a> · 🏖️ <a href="https://praia.digital/praiascore">PraiaScore</a> · 🛡️ <a href="https://praia.digital/seguranca-praia">Segurança Praia</a> · 🔔 <a href="https://praia.digital/alerta-ofertas">Alerta de Ofertas</a></p></div>
+</main>
+<footer><b>Rede Praia Digital</b><div class="net"><a href="https://praia.digital/apps">Hub</a><a href="https://praia.digital/radar-leiloes">Radar de Leilões</a><a href="https://praia.digital/ranking-imobiliarias">Ranking Imobiliárias</a><a href="https://praia.digital/chave-na-mao">Chave na Mão</a><a href="https://praia.digital/onda-certa">Onda Certa</a><a href="https://praia.digital/radar-precos">Radar de Preços</a></div><p>© 2026 Praia Digital</p></footer>
+<script>
+const D=[['Apto 2q varanda — Enseada, Guarujá',520000,468000,'2 vagas','Frente parcial mar'],['Studio mobiliado — Gonzaga, Santos',380000,349000,'Pronto p/ temporada',''],['Casa 3q piscina — Juquehy',1890000,1690000,'Alto padrão',''],['Apto 1q — Boqueirão, P. Grande',290000,262000,'1 vaga',''],['Casa de condomínio — Riviera',1250000,1125000,'4 suítes',''],['Cobertura duplex — Itaguá, Ubatuba',980000,882000,'Vista canal',''],['Apto 2q — Centro, Mongaguá',240000,209000,'A 200m da praia',''],['Terreno plano 400m² — Peruíbe',180000,156000,'Solo firme','Ver no Solo Sagrado']];
+document.getElementById('deals').innerHTML=D.map(d=>{const off=Math.round((1-d[2]/d[1])*100);return '<div class="deal"><span class="off">-'+off+'%</span><b>'+d[0]+'</b><br><span class="old">R$ '+d[1].toLocaleString('pt-BR')+'</span><br><span class="price">R$ '+d[2].toLocaleString('pt-BR')+'</span><br>'+(d[3]?'<span class="tag">'+d[3]+'</span> ':'')+(d[4]?'<span class="tag">'+d[4]+'</span>':'')+'</div>';}).join('');
+</script>
+</body>
+</html>
